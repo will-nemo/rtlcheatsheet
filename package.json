@@ -10,14 +10,14 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:rtlcheatsheet.helloWorld"
+		"onCommand:rtlcheatsheet.rtlCheatsheet"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "rtlcheatsheet.helloWorld",
-				"title": "Hello World"
+				"command": "rtlcheatsheet.rtlCheatsheet",
+				"title": "Open React Testing Library Cheatsheet"
 			}
 		]
 	},
