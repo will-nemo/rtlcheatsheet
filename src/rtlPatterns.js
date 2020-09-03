@@ -30,7 +30,7 @@ const findAllByPattern = /findAllBy/g;
 const waitForPattern = /waitFor/g;
 const waitForElementToBeRemovedPattern = /waitFor/g;
 const hydratePattern = /hydrate/g;
-const wrapperPattern= /wrapper/g;
+const wrapperPattern = /wrapper/g;
 
 const allRTLPatterns = [
   renderVariablePattern,
@@ -49,9 +49,9 @@ const allRTLPatterns = [
   waitForPattern,
   waitForElementToBeRemovedPattern,
   hydratePattern,
-  wrapperPattern
+  wrapperPattern,
 ];
 
 module.exports = {
-	allRTLPatterns
-}
+  allRTLPatterns,
+};
