@@ -211,6 +211,8 @@ function getWebViewContent(cspSource, stylePath) {
           </div>
         </div>
 
+        <div class="footer-link">All credit goes to <a href="https://testing-library.com/" target="_blank" rel="noopener">React Testing Library</a></div>
+        <div class="footer-link">Check out their <a href="https://github.com/testing-library" target="_blank" rel="noopener">Github</a></div>
       </main>
     </body>
   </html>`;
