@@ -33,11 +33,11 @@ function activate(context) {
 
     vscode.languages.registerHoverProvider(SUPPORTED_FILES, {
       provideHover(doc, pos) {
-        const range = Utils.getPropertyRangeAtPosition(doc, pos);
+        const { range, link } = Utils.getPropertyRangeAtPosition(doc, pos);
         if (range === undefined) {
           return;
         }
-        const markdownString = Utils.buildMarkdownString();
+        const markdownString = Utils.buildMarkdownString(link);
         return new vscode.Hover(markdownString, range);
       },
     })
