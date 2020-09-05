@@ -1,65 +1,31 @@
-# rtlcheatsheet README
+# React Testing Library Cheatsheet
 
-This is the README for your extension "rtlcheatsheet". After writing up a brief description, we recommend including the following sections.
+VS Code extension that lets you open a react testing library cheatsheet directly in the editor.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+The cheatsheet can be opened in two ways:
 
-For example if there is an image subfolder under your extension project workspace:
+* Press `Ctrl+Shift+P` (Win, Linux) / `Cmd+Shift+P` (Mac) and search for the `Open React Testing Library Cheatsheet` command.
+* Hover any React testing library API declaration and click the Open React Testing Library Cheatsheet link in the popup.
 
-\!\[feature X\]\(images/feature-x.png\)
+Besides the `Open React Testing Library Cheatsheet` link in the hover popup, there’s also a link to the API. This aims to make it easier to quickly find all information needed to utilize this testing library.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Works with the following file types:
 
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+* JavaScript
+* TypeScript
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
+Initial release of the React Testing Library Cheatsheet extension.
 
-### 1.0.1
+* Shows cheatsheet in the editor when the command `Open React Testing Library Cheatsheet` is called.
+* Opens cheatsheet in the editor when you hover RTL API declaration and click the link to open cheatsheet.
+* Contains link for API official documentation for command hovered
 
-Fixed issue #.
+## Credit
 
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+The cheatsheet in this extension is based on the [React Testing Library Cheatsheet](https://github.com/testing-library/react-testing-library/raw/master/other/cheat-sheet.pdf) by [React Testing Library](https://testing-library.com/).
