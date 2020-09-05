@@ -20,6 +20,10 @@ a:hover {
   margin-bottom: 3%;
 }
 
+.footer-link {
+  margin-bottom: 1.5%;
+}
+
 .info-container {
   min-width: 350px;
   max-width: 500px;
