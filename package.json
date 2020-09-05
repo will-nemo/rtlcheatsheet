@@ -9,9 +9,18 @@
 	"categories": [
 		"Other"
 	],
+	"license": "MIT",
+	"icon": "images/octopus-128x128.png",
 	"activationEvents": [
-		"onCommand:rtlcheatsheet.rtlCheatsheet"
+		"onCommand:rtlcheatsheet.rtlCheatsheet",
+		"onLanguage:javascript",
+		"onLanguage:typescript"
 	],
+	"publisher": "will-nemo",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/will-nemo/rtlcheatsheet"
+	},
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
