@@ -8,27 +8,48 @@ const Utils = require("./src/utils");
  *******************/
 
 const SUPPORTED_FILES = ["javascript", "typescript"];
+
 /**
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
+  // track current webview
+  let currentPanel = undefined;
+
   context.subscriptions.push(
     vscode.commands.registerCommand("rtlcheatsheet.rtlCheatsheet", () => {
-      const styleRoot = vscode.Uri.file(
-        path.join(context.extensionPath, "style")
-      );
-      const panel = vscode.window.createWebviewPanel(
-        "rtlCheatsheet",
-        "React Testing Library Cheatsheet",
-        vscode.ViewColumn.Beside,
-        {
-          localResourceRoots: [styleRoot],
-        }
-      );
-      panel.webview.html = webViewContent.getWebViewContent(
-        panel.webview.cspSource,
-        panel.webview.asWebviewUri(styleRoot)
-      );
+      const columnToShowIn = vscode.window.activeTextEditor
+        ? vscode.window.activeTextEditor.viewColumn
+        : undefined;
+
+      if (currentPanel) {
+        currentPanel.reveal(columnToShowIn);
+      } else {
+        const styleRoot = vscode.Uri.file(
+          path.join(context.extensionPath, "style")
+        );
+        currentPanel = vscode.window.createWebviewPanel(
+          "rtlCheatsheet",
+          "React Testing Library Cheatsheet",
+          vscode.ViewColumn.Beside,
+          {
+            localResourceRoots: [styleRoot],
+          }
+        );
+        currentPanel.webview.html = webViewContent.getWebViewContent(
+          currentPanel.webview.cspSource,
+          currentPanel.webview.asWebviewUri(styleRoot)
+        );
+
+        // Reset when the current panel is closed
+        currentPanel.onDidDispose(
+          () => {
+            currentPanel = undefined;
+          },
+          null,
+          context.subscriptions
+        );
+      }
     }),
 
     vscode.languages.registerHoverProvider(SUPPORTED_FILES, {
