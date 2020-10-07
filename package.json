@@ -14,7 +14,9 @@
 	"activationEvents": [
 		"onCommand:rtlcheatsheet.rtlCheatsheet",
 		"onLanguage:javascript",
-		"onLanguage:typescript"
+		"onLanguage:typescript",
+		"onLanguage:javascriptreact",
+		"onLanguage:typescriptreact"
 	],
 	"publisher": "willnemo",
 	"repository": {

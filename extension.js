@@ -7,7 +7,7 @@ const Utils = require("./src/utils");
  * Constants
  *******************/
 
-const SUPPORTED_FILES = ["javascript", "typescript"];
+const SUPPORTED_FILES = ["javascript", "typescript", "javascriptreact", "typescriptreact"];
 
 /**
  * @param {vscode.ExtensionContext} context
