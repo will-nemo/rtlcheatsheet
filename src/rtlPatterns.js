@@ -2,6 +2,7 @@
  * Matches `render(anyVariable)` property
  */
 const renderVariablePattern = /render\([a-zA-Z_]\w*\)/g;
+const renderImportPattern = /render/g;
 
 /**
  * Matches `render(<Component />)` property
@@ -14,6 +15,7 @@ const renderWhiteSpaceComponentPattern = /render\(\<[a-zA-Z_]\w*\s\/\>\)/g;
 const renderComponentPattern = /render\(\<[a-zA-Z_]\w*\/\>\)/g;
 const screenPattern = /screen/g;
 const userEventPattern = /userEvent/g;
+const debugImportPattern = /debug/g;
 const debugPattern = /debug\(\)/g;
 const debugElementPattern = /debug\([a-zA-Z_]\w*\)/g;
 const getByPattern = /getBy/g;
@@ -23,7 +25,7 @@ const queryAllByPattern = /queryAllBy/g;
 const findByPattern = /findBy/g;
 const findAllByPattern = /findAllBy/g;
 const waitForPattern = /waitFor/g;
-const waitForElementToBeRemovedPattern = /waitFor/g;
+const waitForElementToBeRemovedPattern = /waitForElementToBeRemoved/g;
 const hydratePattern = /hydrate/g;
 const wrapperPattern = /wrapper/g;
 const rolePattern = /Role/g;
@@ -37,6 +39,10 @@ const testIdPattern = /TestId/g;
 
 const renderVariable = {
   pattern: renderVariablePattern,
+  link: 'https://testing-library.com/docs/marko-testing-library/api#render'
+};
+const renderImport = {
+  pattern: renderImportPattern,
   link: 'https://testing-library.com/docs/marko-testing-library/api#render'
 };
 const renderComponent = {
@@ -57,6 +63,10 @@ const userEvent = {
 };
 const debug = {
   pattern: debugPattern,
+  link: 'https://testing-library.com/docs/dom-testing-library/api-queries#screendebug'
+};
+const debugImport = {
+  pattern: debugImportPattern,
   link: 'https://testing-library.com/docs/dom-testing-library/api-queries#screendebug'
 };
 const debugElement = {
@@ -138,12 +148,14 @@ const testId = {
 
 const allRTLPatterns = [
   renderVariable,
+  renderImport,
   renderComponent,
   renderWhiteSpaceComponent,
   screen,
   userEvent,
   debug,
   debugElement,
+  debugImport,
   getBy,
   getAllBy,
   queryBy,
